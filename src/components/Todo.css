@@ -1,0 +1,129 @@
+.containerMain{
+    min-width: 100vw;
+    min-height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background: linear-gradient(to right, #de6262 , #ffb88c);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.myContainerData{
+    width: 40%;
+    min-height: 500px;
+    background: rgba(255, 255, 255, 1);
+    max-height: max-content;
+    border-radius:10px;
+    box-shadow: 0 0 10px #de6262;
+    display: flex;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    flex-direction: column;
+    padding: 60px 30px;
+}
+
+.myContainerData > h2 >i{
+    background: -webkit-linear-gradient(#de6262 , #ffb88c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.myContainerData > h2, p {
+    text-transform: uppercase;
+}
+
+.inputContainer{
+    position: relative;
+    display: flex;
+}
+
+.inputContainer > input{
+    margin-top: 10px;
+    min-width: 250px;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px 8px;
+    outline: none;
+    border: 1px solid #de6262;
+    border-radius: 5px;
+    background-color: whitesmoke;
+}
+.inputContainer > button{
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    margin: 10px 0 0 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: linear-gradient(to right, #de6262 , #ffb88c);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+
+.inputContainer > button:hover{
+    background: #de6262;
+}
+
+.todoData{
+    padding: 20px 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.data{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding: 5px 8px; 
+    background: linear-gradient(to right, #de6262 , #ffb88c);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    backdrop-filter: opacity(20%);
+    margin: 10px 0;
+}
+
+.data > p{
+    color: white;
+    max-width: 70%;
+    word-wrap: break-word;
+    height: max-content;
+}
+.data > .btnForEdit > button{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background:white;
+    color: #de6262;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+@media screen and (max-width:888px) {
+    .myContainerData{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:488px) {
+    .myContainerData{
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+
+    .todoData{
+        min-height: 400px;
+        max-height: 400px;
+    }
+}
